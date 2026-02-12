@@ -1,9 +1,8 @@
-// Grab home element
-const home = document.querySelector(".site-main");
+// Grab site content element
+const home = document.querySelector(".site-content");
 // Create banners
-const leftBanner = document.createElement("section");
-const rightBanner = document.createElement("section");
-
+const leftBanner = document.createElement("site-home__banner");
+const rightBanner = document.createElement("site-home__banner");
 
 const homePageContent = () => {
     // Add Home Elements
@@ -11,12 +10,13 @@ const homePageContent = () => {
 
     // Position Home Elements
     positionHomeElements();
+
     // Style Home Elements
     styleHomeElements();
 }
 
 const positionHomeElements = () => {
-    // Position Home
+    // Make the home content a grid
     home.style.display = "grid";
     home.style.gridTemplateColumns = "1fr 1fr";
 
@@ -96,7 +96,6 @@ const styleLeftBanner = () => {
     leftBanner.style.opacity = "0.3";
     leftBanner.style.padding = "10px";
 };
-
 
 const positionRightBanner = () => {
     rightBanner.style.display = "flex";

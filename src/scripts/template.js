@@ -1,6 +1,7 @@
 import { createSiteElements } from "./site.js";
 import { headerContent } from "./header.js";
 import { homePageContent } from "./home.js";
+import { menuPageContent } from "./menu.js";
 import { footerCreation, footerPositioning, footerStyling } from "./footer.js";
 import "../css/styles.css";
 import "../css/reset.css";
@@ -13,9 +14,10 @@ createSiteElements();
 headerContent();
 
 // Home Page Content
-homePageContent();
+// homePageContent();
 
 // Menu Content Settings
+menuPageContent();
 
 // About Content Settings
 
