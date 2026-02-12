@@ -9,17 +9,18 @@ const homePageContent = () => {
     // Add Home Elements
     createHomeElements();
 
-    // Position Home Elements
-    positionHomeElements();
     // Style Home Elements
     styleHomeElements();
+
+    // Position Home Elements
+    positionHomeElements();
+
+    // Make home a grid
+    home.style.display = "grid";
+    home.style.gridTemplateColumns = "1fr 1fr";
 }
 
 const positionHomeElements = () => {
-    // Position Home
-    home.style.display = "grid";
-    home.style.gridTemplateColumns = "1fr 1fr";
-
     // Position Banners
     positionLefttBanner();
     positionRightBanner();
@@ -80,6 +81,13 @@ const createHomeElements = () => {
     // Add both elements to home
     home.appendChild(leftBanner);
     home.appendChild(rightBanner);
+}
+
+const styleLeftBanner = () => {
+    leftBanner.style.borderRight = "1px solid white";
+    leftBanner.style.background = "#000000";
+    leftBanner.style.opacity = "0.3";
+    leftBanner.style.padding = "10px";
 };
 
 const positionLefttBanner = () => {
@@ -90,25 +98,17 @@ const positionLefttBanner = () => {
 
 };
 
-const styleLeftBanner = () => {
-    leftBanner.style.borderRight = "1px solid white";
-    leftBanner.style.background = "#000000";
-    leftBanner.style.opacity = "0.3";
-    leftBanner.style.padding = "10px";
-};
-
-
-const positionRightBanner = () => {
-    rightBanner.style.display = "flex";
-    rightBanner.style.flexDirection = "column";
-    rightBanner.style.justifyContent = "center";
-
-};
-
-const styleRightBanner = () => {
+const styleMenuBanner = () => {
     rightBanner.style.backgroundColor = "#000000";
     rightBanner.style.opacity = "0.3";
     rightBanner.style.padding = "10px";
 };
 
-export { homePageContent };
+const positionMenuBanner = () => {
+    rightBanner.style.display = "flex";
+    rightBanner.style.flexDirection = "column";
+    rightBanner.style.justifyContent = "center";
+
+}
+
+export { menuPageContent };

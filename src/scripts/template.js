@@ -1,18 +1,16 @@
-import { siteStyling, sitePositioning } from "./site.js";
-import { headerPositioning, headerStyling } from "./header.js";
+import { createSiteElements } from "./site.js";
+import { headerContent } from "./header.js";
 import { homePageContent } from "./home.js";
 import { footerCreation, footerPositioning, footerStyling } from "./footer.js";
 import "../css/styles.css";
 import "../css/reset.css";
 
 
-// Site Settings
-siteStyling();
-sitePositioning();
+// Overall Site Settings
+createSiteElements();
 
 // Header Settings
-headerPositioning();
-headerStyling();
+headerContent();
 
 // Home Page Content
 homePageContent();

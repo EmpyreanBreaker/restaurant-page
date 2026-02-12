@@ -1,10 +1,15 @@
 import bg from "../images/background/matcha-tea.webp";
 
-// Grab the site body
+// Grab site
 const site = document.querySelector(".site");
 
+const createSiteElements = () => {
+    positionSiteElements();
+    styleSiteElements();
+}
+
 // Set site positioning
-const sitePositioning = () => {
+const positionSiteElements = () => {
     site.style.width = "100vw";
     site.style.height = "100vh";
     site.style.display = "grid";
@@ -12,11 +17,11 @@ const sitePositioning = () => {
 }
 
 // Set site styling
-const siteStyling = () => {
+const styleSiteElements = () => {
     // Set the background image for the site
     site.style.backgroundImage = `url(${bg})`;
     site.style.backgroundSize = "cover";
     site.style.backgroundRepeat = "no-repeat";
 }
 
-export { sitePositioning, siteStyling };
+export { createSiteElements };
