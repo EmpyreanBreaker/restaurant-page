@@ -1,4 +1,4 @@
-import bg from "../images/background/matcha-tea-5869-3913.jpg";
+import bg from "../images/background/matcha-tea.webp";
 
 // Grab the site body
 const site = document.querySelector(".site");
