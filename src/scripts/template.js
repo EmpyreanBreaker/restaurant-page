@@ -1,26 +1,27 @@
 import { createSiteElements } from "./site.js";
-import { headerContent } from "./header.js";
+import { headerContent, navigation } from "./header.js";
 import { homePageContent } from "./home.js";
 import { menuPageContent } from "./menu.js";
 import { footerCreation, footerPositioning, footerStyling } from "./footer.js";
 import "../css/styles.css";
 import "../css/reset.css";
 
+// Run on page load
+(() => {
+    // Overall Site Settings
+    createSiteElements();
 
-// Overall Site Settings
-createSiteElements();
+    // Header Settings
+    headerContent();
 
-// Header Settings
-headerContent();
+    // Home Page Content
+    homePageContent();
 
-// Home Page Content
-// homePageContent();
+    // About Content Settings
 
-// Menu Content Settings
-menuPageContent();
+    // Footer Settings
+    footerCreation();
+    footerStyling();
+})();
 
-// About Content Settings
-
-// Footer Settings
-footerCreation();
-footerStyling();
+navigation(homePageContent, menuPageContent, headerContent);

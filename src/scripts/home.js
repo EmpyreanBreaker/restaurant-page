@@ -1,10 +1,20 @@
-// Grab site content element
+// Grab content space
 const home = document.querySelector(".site-content");
 // Create banners
 const leftBanner = document.createElement("site-home__banner");
 const rightBanner = document.createElement("site-home__banner");
 
+// Clear module scoped variables to prevent building old elements on the new
+const clearModuleScopedElements = () => {
+    home.replaceChildren();
+
+    leftBanner.replaceChildren();
+
+    rightBanner.replaceChildren();
+}
+
 const homePageContent = () => {
+    clearModuleScopedElements();
     // Add Home Elements
     createHomeElements();
 
@@ -32,8 +42,6 @@ const styleHomeElements = () => {
 };
 
 const createHomeElements = () => {
-    leftBanner.classList.add("site-home__banner", "site-home__left-banner");
-
     // Create container for Welcome message
     const welcomeContainer = document.createElement("div");
     welcomeContainer.classList.add("site-home__welcome-container");

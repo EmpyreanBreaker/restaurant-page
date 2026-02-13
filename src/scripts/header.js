@@ -1,7 +1,9 @@
-// Grab page header
+// Grab header
 const header = document.querySelector(".site-header");
 // Grab nav
 const nav = document.querySelector(".site-nav");
+// Grab content space
+const contentSpace = document.querySelector(".site-content");
 
 const headerContent = () => {
     positionHeaderElements();
@@ -33,4 +35,27 @@ const positionNav = () => {
     nav.style.gap = "10rem";
 };
 
-export { headerContent };
+const navigation = (showHomeContent, showMenuContent, showAboutContent) => {
+    nav.addEventListener("click", (e) => {
+        const navButton = e.target.closest(".site-nav__button");
+        // If invalid, do nothing
+        if (!navButton) {
+            return;
+        }
+
+        // Wipe out content space
+        contentSpace.innerHTML = "";
+
+        if (navButton.textContent == "Home") {
+            showHomeContent();
+        }
+        else if (navButton.textContent == "Menu") {
+            showMenuContent();
+        }
+        else {
+            showAboutContent();
+        }
+    });
+}
+
+export { headerContent, navigation };
