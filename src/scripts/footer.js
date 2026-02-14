@@ -1,7 +1,18 @@
 // Grab the site body
 const site = document.querySelector(".site");
 
-const footerCreation = () => {
+const footerContent = () => {
+    // Create footer elements
+    createFooterElements();
+
+    // Position footer elements
+    positionFooterElements();
+
+    // Style footer elements
+    styleFooterElements();
+}
+
+const createFooterElements = () => {
     // Create the page footer
     const footer = document.createElement("footer");
     footer.classList.add("site-footer");
@@ -13,16 +24,14 @@ const footerCreation = () => {
 
     // Append the footer
     site.appendChild(footer);
-
-
 }
 
-const footerPositioning = () => { };
+const positionFooterElements = () => { };
 
-const footerStyling = () => {
+const styleFooterElements = () => {
     const footer = document.querySelector(".site-footer");
     // Apply footer Styling
     footer.style.borderTop = "1px solid #E69B97";
 }
 
-export { footerCreation, footerPositioning, footerStyling };
+export { footerContent };

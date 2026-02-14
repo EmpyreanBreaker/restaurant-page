@@ -31,7 +31,7 @@ const positionHomeElements = () => {
     home.style.gridTemplateColumns = "1fr 1fr";
 
     // Position Banners
-    positionLefttBanner();
+    positionLeftBanner();
     positionRightBanner();
 };
 
@@ -90,7 +90,7 @@ const createHomeElements = () => {
     home.appendChild(rightBanner);
 };
 
-const positionLefttBanner = () => {
+const positionLeftBanner = () => {
     leftBanner.style.display = "flex";
     leftBanner.style.flexDirection = "column";
     leftBanner.style.justifyContent = "center";

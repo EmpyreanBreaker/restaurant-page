@@ -2,7 +2,8 @@ import { createSiteElements } from "./site.js";
 import { headerContent, navigation } from "./header.js";
 import { homePageContent } from "./home.js";
 import { menuPageContent } from "./menu.js";
-import { footerCreation, footerPositioning, footerStyling } from "./footer.js";
+import { aboutPageContent } from "./about.js";
+import { footerContent } from "./footer.js";
 import "../css/styles.css";
 import "../css/reset.css";
 
@@ -15,13 +16,13 @@ import "../css/reset.css";
     headerContent();
 
     // Home Page Content
-    homePageContent();
+    //homePageContent();
 
     // About Content Settings
+    aboutPageContent();
 
     // Footer Settings
-    footerCreation();
-    footerStyling();
+    footerContent()
 })();
 
-navigation(homePageContent, menuPageContent, headerContent);
+// navigation(homePageContent, menuPageContent, aboutPageContent);
