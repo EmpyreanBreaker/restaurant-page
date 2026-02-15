@@ -5,6 +5,9 @@ const about = document.querySelector(".site-content");
 const leftAboutBanner = document.createElement("site-about__banner");
 const rightAboutBanner = document.createElement("site-about__banner");
 
+// Create about section title card
+const aboutTitleCard = document.createElement("div");
+
 const cardList = [
     {
         title: `Our First Pour`,
@@ -25,6 +28,7 @@ const clearModuleScopedElements = () => {
     about.replaceChildren();
     leftAboutBanner.replaceChildren();
     rightAboutBanner.replaceChildren();
+    aboutTitleCard.replaceChildren();
 }
 
 const aboutPageContent = () => {
@@ -42,22 +46,28 @@ const aboutPageContent = () => {
 }
 
 const createAboutElements = () => {
-    // Append banners to about section
+    // Append created banners
     about.append(leftAboutBanner, rightAboutBanner);
 
     createAboutCard();
+
+    createAboutTitleCard();
 }
 
 const positionAboutElements = () => {
     // Make the about content a grid
     about.style.display = "grid";
     about.style.gridTemplateColumns = "1fr 1fr";
+    about.style.position = "relative";
 
     // Position left banner
     positionLeftAboutBanner();
 
     // position right banner
     positionRightAboutBanner();
+
+    // Position about title card
+    positionAboutTitleCard();
 
     // Position about cards
     positionAboutCard();
@@ -69,12 +79,20 @@ const styleAboutElements = () => {
 
     // Style right banner
     styleRightAboutBanner();
+
+    // Style about title card
+    styleaboutTitleCard();
+
+    // Style about card
+    styleAboutCard();
 };
 
 const positionLeftAboutBanner = () => {
     leftAboutBanner.style.display = "flex";
     leftAboutBanner.style.justifyContent = "center";
     leftAboutBanner.style.alignItems = "center";
+    leftAboutBanner.style.position = "relative";
+    leftAboutBanner.style.zIndex = "1";
 };
 
 const styleLeftAboutBanner = () => {
@@ -87,6 +105,8 @@ const positionRightAboutBanner = () => {
     rightAboutBanner.style.display = "flex";
     rightAboutBanner.style.justifyContent = "center";
     rightAboutBanner.style.alignItems = "center";
+    rightAboutBanner.style.position = "relative";
+    rightAboutBanner.style.zIndex = "1";
 };
 
 const styleRightAboutBanner = () => {
@@ -94,16 +114,28 @@ const styleRightAboutBanner = () => {
     rightAboutBanner.style.opacity = "0.3";
 };
 
-const positionAboutCard = () => {
-    const card = document.querySelectorAll(".site-about__card");
-    card.forEach(card => {
-        card.style.display = "flex";
-        card.style.flexDirection = "column";
-        card.style.gap = "0.6rem";
-        if (card.classList.contains("site-about__right-card")) {
-            card.style.transform = "translateY(-300px)"
-        }
-    })
+const createAboutTitleCard = () => {
+    // Create elements for about card
+    const cardTitle = document.createElement("h3");
+    const cardDescription = document.createElement("p");
+
+    // Populate elements
+    cardTitle.innerHTML = "A Little Sip"
+    cardDescription.innerHTML = "About Us"
+    aboutTitleCard.append(cardTitle, cardDescription);
+
+    // Append card
+    about.append(aboutTitleCard);
+};
+
+const positionAboutTitleCard = () => {
+    aboutTitleCard.style.position = "absolute";
+    aboutTitleCard.style.left = "50%"
+    aboutTitleCard.style.transform = "translateX(-50%)";
+    aboutTitleCard.style.zIndex = "10";
+}
+
+const styleaboutTitleCard = () => {
 }
 
 const createAboutCard = () => {
@@ -133,4 +165,24 @@ const createAboutCard = () => {
         }
     }
 }
+
+const positionAboutCard = () => {
+    const card = document.querySelectorAll(".site-about__card");
+    card.forEach(card => {
+        card.style.display = "flex";
+        card.style.flexDirection = "column";
+        card.style.gap = "0.6rem";
+        if (card.classList.contains("site-about__right-card")) {
+            card.style.transform = "translateY(-300px)"
+        }
+    })
+}
+
+const styleAboutCard = () => {
+    const card = document.querySelectorAll(".site-about__card");
+    card.forEach(card => {
+
+    })
+}
+
 export { aboutPageContent };

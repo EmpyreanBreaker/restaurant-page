@@ -16,13 +16,16 @@ import "../css/reset.css";
     headerContent();
 
     // Home Page Content
-    //homePageContent();
+    homePageContent();
+
+    // Menu Page Content
+   // menuPageContent();
 
     // About Content Settings
-    aboutPageContent();
+    //aboutPageContent();
 
     // Footer Settings
     footerContent()
 })();
 
-// navigation(homePageContent, menuPageContent, aboutPageContent);
+ navigation(homePageContent, menuPageContent, aboutPageContent);

@@ -7,6 +7,9 @@ const menuBanner = document.createElement("section");
 // Create tea menu
 const teaMenu = document.createElement("div");
 
+// Create menu section title card
+const menuTitleCard = document.createElement("div");
+
 // Create tea list
 const teaList = [
     {
@@ -67,6 +70,8 @@ const clearModuleScopedElements = () => {
 
     menuBanner.replaceChildren();
 
+    menuTitleCard.replaceChildren();
+
     teaMenu.replaceChildren();
 }
 
@@ -88,6 +93,9 @@ const createMenuElements = () => {
     // Append menuBanner to menu
     menu.appendChild(menuBanner);
 
+    // Create menu title card
+    createMenuTitleCard();
+
     // Create and append tea menu
     createTeaMenu();
 }
@@ -100,6 +108,9 @@ const positionMenuElements = () => {
     // Position menu banner
     positionMenuBanner();
 
+    // Position menu title card
+    positionMenuTitleCard();
+
     // Position tea menu
     positionTeaMenu();
 
@@ -110,6 +121,9 @@ const positionMenuElements = () => {
 const styleMenuElements = () => {
     // Style menu banner
     styleMenuBanner();
+
+    // Style nmenu title card
+    styleMenuTitleCard();
 
     // Style tea menu
     styleTeaMenu();
@@ -132,33 +146,30 @@ const styleMenuBanner = () => {
     menuBanner.style.opacity = "0.3";
 };
 
-const positionTeaMenu = () => {
-    teaMenu.style.display = "grid";
-    teaMenu.style.gap = "1rem";
+const createMenuTitleCard = () => {
+    // Create elements for about card
+    const cardTitle = document.createElement("h3");
+    const cardDescription = document.createElement("p");
+
+    // Populate elements
+    cardTitle.innerHTML = "A Little Sip"
+    cardDescription.innerHTML = "Menu"
+    menuTitleCard.append(cardTitle, cardDescription);
+
+    // Append card
+    teaMenu.append(menuTitleCard);
+};
+
+const positionMenuTitleCard = () => {
+
 }
 
-const styleTeaMenu = () => {
-    teaMenu.style.border = "3px solid yellow";
-}
-
-
-const positionTeaCard = () => {
-    const teaCard = document.querySelectorAll(".site-menu__tea-card");
-    teaCard.forEach(card => {
-        card.style.display = "grid";
-        card.style.gap = "0.6rem";
-    })
-}
-
-const styleTeaCard = () => {
-    const teaCard = document.querySelectorAll(".site-menu__tea-card");
-    teaCard.forEach(card => {
-        card.style.border = "5px solid blue";
-    })
+const styleMenuTitleCard = () => {
 }
 
 const createTeaMenu = () => {
     // Loop through list and add to teaMenu
+
     teaList.forEach((tea) => {
 
         const teaCard = document.createElement("div");
@@ -184,6 +195,30 @@ const createTeaMenu = () => {
     });
     // Append to menu banner
     menuBanner.append(teaMenu);
+}
+
+const positionTeaMenu = () => {
+    teaMenu.style.display = "grid";
+    teaMenu.style.gap = "1rem";
+}
+
+const styleTeaMenu = () => {
+    teaMenu.style.border = "3px solid yellow";
+}
+
+const positionTeaCard = () => {
+    const teaCard = document.querySelectorAll(".site-menu__tea-card");
+    teaCard.forEach(card => {
+        card.style.display = "grid";
+        card.style.gap = "0.6rem";
+    })
+}
+
+const styleTeaCard = () => {
+    const teaCard = document.querySelectorAll(".site-menu__tea-card");
+    teaCard.forEach(card => {
+        card.style.border = "5px solid blue";
+    })
 }
 
 export { menuPageContent };
