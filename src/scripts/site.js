@@ -1,4 +1,4 @@
-import bg from "../images/background/matcha-tea.webp";
+import bg from "../images/matcha-tea.webp";
 
 // Grab site
 const site = document.querySelector(".site");
@@ -22,6 +22,7 @@ const styleSiteElements = () => {
     site.style.backgroundImage = `url(${bg})`;
     site.style.backgroundSize = "cover";
     site.style.backgroundRepeat = "no-repeat";
+    site.style.color = "#F5F1E8";
 }
 
 export { createSiteElements };

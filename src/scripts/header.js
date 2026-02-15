@@ -17,6 +17,8 @@ const positionHeaderElements = () => {
 
 const styleHeaderElements = () => {
     styleHeader();
+    styleNav();
+    styleButtons();
 };
 
 const positionHeader = () => {
@@ -26,14 +28,43 @@ const positionHeader = () => {
 }
 
 const styleHeader = () => {
-    // Apply header Styling
-    header.style.borderBottom = "1px solid #E69B97";
+    header.style.backgroundColor = "rgba(0, 0, 0, 0.55)";
+    header.style.borderBottom = "1px solid #7A9A8B";
 }
 
 const positionNav = () => {
     nav.style.display = "flex";
     nav.style.gap = "10rem";
 };
+
+const styleNav = () => { };
+
+const styleButtons = () => {
+    const buttons = document.querySelectorAll(".site-nav__button");
+
+    // Default style
+    buttons.forEach(button => {
+        button.style.background = "transparent";
+        button.style.border = "none";
+        button.style.cursor = "pointer";
+        button.style.color = "#F5F1E8";
+        button.style.borderBottom = "1px solid transparent"
+        button.style.fontSize = "2rem";
+
+        // Hover style
+        button.addEventListener("mouseenter", () => {
+            button.style.color = "#A7B8A3";
+            button.style.borderBottom = "1px solid #A7B8A3";
+        });
+
+        button.addEventListener("mouseleave", () => {
+            button.style.color = "#F5F1E8";
+            button.style.borderBottom = "1px solid transparent"
+        })
+    })
+
+
+}
 
 const navigation = (showHomeContent, showMenuContent, showAboutContent) => {
     nav.addEventListener("click", (e) => {

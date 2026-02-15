@@ -36,7 +36,7 @@ const positionFooter = () => {
 }
 
 const styleFooter = () => {
-    // Apply footer Styling
+    footer.style.backgroundColor = "rgba(0, 0, 0, 0.55)";
     footer.style.borderTop = "1px solid #E69B97";
 }
 
