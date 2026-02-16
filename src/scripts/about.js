@@ -7,6 +7,7 @@ const rightAboutBanner = document.createElement("site-about__banner");
 
 // Create about section title card
 const aboutTitleCard = document.createElement("div");
+aboutTitleCard.classList.add("site-about__title-card");
 
 const cardList = [
     {
@@ -18,10 +19,9 @@ const cardList = [
         title: `The Space We're Creating`,
         description: `We are building a sanctuary in the spaces between movement; 
         A place where the world slows just enough for you to notice the warmth 
-        in your hands and the stillness in your breath. 
-        Thoughtfully sourced teas, intentional design, and space to simply be.`
-    }
-];
+        in your hands and the stillness in your breath. `
+    },
+]
 
 // Clear module scoped variables to prevent building old elements on the new
 const clearModuleScopedElements = () => {
@@ -81,7 +81,7 @@ const styleAboutElements = () => {
     styleRightAboutBanner();
 
     // Style about title card
-    styleaboutTitleCard();
+    styleAboutTitleCard();
 
     // Style about card
     styleAboutCard();
@@ -89,29 +89,28 @@ const styleAboutElements = () => {
 
 const positionLeftAboutBanner = () => {
     leftAboutBanner.style.display = "flex";
-    leftAboutBanner.style.justifyContent = "center";
+    leftAboutBanner.style.justifyContent = "flex-end";
+    leftAboutBanner.style.paddingRight = "0.5rem";
     leftAboutBanner.style.alignItems = "center";
     leftAboutBanner.style.position = "relative";
     leftAboutBanner.style.zIndex = "1";
 };
 
 const styleLeftAboutBanner = () => {
-    leftAboutBanner.style.background = "black";
-    leftAboutBanner.style.opacity = "0.3";
-    leftAboutBanner.style.borderRight = "5px solid purple";
+    leftAboutBanner.style.backgroundColor = "rgba(0, 0, 0, 0.55)";
 };
 
 const positionRightAboutBanner = () => {
     rightAboutBanner.style.display = "flex";
-    rightAboutBanner.style.justifyContent = "center";
+    rightAboutBanner.style.justifyContent = "flex-start";
+    rightAboutBanner.style.paddingLeft = "0.5rem";
     rightAboutBanner.style.alignItems = "center";
     rightAboutBanner.style.position = "relative";
     rightAboutBanner.style.zIndex = "1";
 };
 
 const styleRightAboutBanner = () => {
-    rightAboutBanner.style.background = "black";
-    rightAboutBanner.style.opacity = "0.3";
+    rightAboutBanner.style.backgroundColor = "rgba(0, 0, 0, 0.55)";
 };
 
 const createAboutTitleCard = () => {
@@ -129,17 +128,29 @@ const createAboutTitleCard = () => {
 };
 
 const positionAboutTitleCard = () => {
+    aboutTitleCard.style.display = "flex";
+    aboutTitleCard.style.flexDirection = "column";
+    aboutTitleCard.style.gap = "0.6rem";
+    aboutTitleCard.style.alignItems = "center";
+    aboutTitleCard.style.justifyContent = "center";
     aboutTitleCard.style.position = "absolute";
-    aboutTitleCard.style.left = "50%"
+    aboutTitleCard.style.left = "50%";
+    aboutTitleCard.style.top = "4%"
     aboutTitleCard.style.transform = "translateX(-50%)";
     aboutTitleCard.style.zIndex = "10";
 }
 
-const styleaboutTitleCard = () => {
+const styleAboutTitleCard = () => {
+    aboutTitleCard.style.width = "30rem";
+    aboutTitleCard.style.height = "20em";
+    aboutTitleCard.style.padding = "2rem";
+    aboutTitleCard.style.borderRadius = "1rem";
+    aboutTitleCard.style.borderStyle = "solid";
+    aboutTitleCard.style.borderColor = "#F5F1E8";
+    aboutTitleCard.style.borderWidth = "2px 2px 0 2px";
 }
 
 const createAboutCard = () => {
-
     // Fill elements and append to card
     for (let i = 0; i < cardList.length; i++) {
         // Create card
@@ -167,21 +178,28 @@ const createAboutCard = () => {
 }
 
 const positionAboutCard = () => {
-    const card = document.querySelectorAll(".site-about__card");
-    card.forEach(card => {
+    const aboutCard = document.querySelectorAll(".site-about__card");
+    aboutCard.forEach(card => {
         card.style.display = "flex";
         card.style.flexDirection = "column";
         card.style.gap = "0.6rem";
-        if (card.classList.contains("site-about__right-card")) {
-            card.style.transform = "translateY(-300px)"
-        }
+        card.style.alignItems = "center";
+        card.style.justifyContent = "center";
+
     })
 }
 
 const styleAboutCard = () => {
-    const card = document.querySelectorAll(".site-about__card");
-    card.forEach(card => {
-
+    const aboutCard = document.querySelectorAll(".site-about__card");
+    aboutCard.forEach(card => {
+        card.style.width = "30rem";
+        card.style.height = "15rem";
+        card.style.padding = "2rem";
+        card.style.borderRadius = "1rem";
+        card.style.borderStyle = "solid";
+        card.style.borderColor = "#F5F1E8";
+        card.style.borderWidth = "0px 2px 2px 2px";
+        card.style.transform = "translateY(7rem)"
     })
 }
 

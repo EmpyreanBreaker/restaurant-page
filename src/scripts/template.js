@@ -16,13 +16,13 @@ import "../css/fonts.css";
     headerContent();
 
     // Home Page Content
-    homePageContent();
+    //homePageContent();
 
     // Menu Page Content
     // menuPageContent();
 
     // About Content Settings
-    //aboutPageContent();
+    aboutPageContent();
 
     // Footer Settings
     footerContent()
