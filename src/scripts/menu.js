@@ -223,7 +223,7 @@ const positionTeaCard = () => {
         card.style.justifyContent = "center";
         card.style.gap = "0.4rem";
         card.style.padding = "1rem";
-        card.style.width = "60ch";
+        card.style.width = "65ch";
     })
 }
 

@@ -2,6 +2,7 @@
 const site = document.querySelector(".site");
 // Create the page footer
 const footer = document.createElement("footer");
+footer.classList.add("site-footer");
 
 const footerContent = () => {
     // Create footer elements
@@ -24,7 +25,6 @@ const createFooterElements = () => {
 
 const positionFooterElements = () => {
     positionFooter();
-    positionAttributionSection();
 };
 
 const styleFooterElements = () => {
@@ -33,11 +33,15 @@ const styleFooterElements = () => {
 }
 
 const positionFooter = () => {
+    footer.style.display = "flex";
+    footer.style.justifyContent = "center";
+    footer.style.gap = "5rem";
+    footer.style.alignItems = "center";
 }
 
 const styleFooter = () => {
     footer.style.backgroundColor = "rgba(0, 0, 0, 0.55)";
-    footer.style.borderTop = "1px solid #E69B97";
+    footer.style.borderTop = "1px solid #A7B8A3";
 }
 
 const createAttributionSection = () => {
@@ -48,10 +52,11 @@ const createAttributionSection = () => {
 
     // -------- Design --------
     const source = document.createElement("p");
-    source.innerHTML = "Quietly designed & built by ";
+    source.innerHTML = "Designed & built by ";
 
     const sourceLink = document.createElement("a");
-    sourceLink.innerHTML = "Maion Mihael";
+    sourceLink.classList.add("site-footer__link");
+    sourceLink.innerHTML = "Fidel Ojimba";
     sourceLink.href = "https://github.com/EmpyreanBreaker/restaurant-page";
     sourceLink.target = "_blank";
     sourceLink.rel = "noopener noreferrer";
@@ -65,6 +70,7 @@ const createAttributionSection = () => {
 
     const creditLink = document.createElement("a");
     creditLink.innerHTML = "Gaby Baldiskaite";
+    creditLink.classList.add("site-footer__link");
     creditLink.href = "https://unsplash.com/photos/grey-ceramic-mug-with-grey-saucer-SK_6yoHrUTA";
     creditLink.target = "_blank";
     creditLink.rel = "noopener noreferrer";
@@ -77,6 +83,7 @@ const createAttributionSection = () => {
     inspiration.innerHTML = "With gratitude to ";
 
     const inspirationLink = document.createElement("a");
+    inspirationLink.classList.add("site-footer__link");
     inspirationLink.innerHTML = "The Odin Project";
     inspirationLink.href = "https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page";
     inspirationLink.target = "_blank";
@@ -89,22 +96,24 @@ const createAttributionSection = () => {
     footer.append(sourceSection, creditSection, inspirationSection);
 };
 
-
-const classAdder = (...elements) => {
-    elements.forEach(element => {
-        if (!element || !element.classList) {
-            return;
-        }
-        element.classList.add("site-footer__attribution")
-    });
-};
-
-const positionAttributionSection = () => {
-
-}
-
 const styleAttributionSection = () => {
+    const links = document.querySelectorAll(".site-footer__link");
 
+    // Default Styling
+    links.forEach(link => {
+        link.style.textDecoration = "none";
+        link.style.borderBottom = "1px solid transparent";
+        link.style.color = "#A7B8A3";
+
+
+        link.addEventListener("mouseenter", () => {
+            link.style.borderBottom = "1px solid #F5F1E8";
+        })
+
+        link.addEventListener("mouseleave", () => {
+            link.style.borderBottom = "1px solid transparent";
+        })
+    })
 }
 
 export { footerContent };

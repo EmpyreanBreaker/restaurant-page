@@ -16,10 +16,10 @@ import "../css/fonts.css";
     headerContent();
 
     // Home Page Content
-    //homePageContent();
+    homePageContent();
 
     // Menu Page Content
-     menuPageContent();
+    // menuPageContent();
 
     // About Content Settings
     // aboutPageContent();
