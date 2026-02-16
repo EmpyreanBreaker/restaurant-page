@@ -130,7 +130,6 @@ const createAboutTitleCard = () => {
 const positionAboutTitleCard = () => {
     aboutTitleCard.style.display = "flex";
     aboutTitleCard.style.flexDirection = "column";
-    aboutTitleCard.style.gap = "0.6rem";
     aboutTitleCard.style.alignItems = "center";
     aboutTitleCard.style.justifyContent = "center";
     aboutTitleCard.style.position = "absolute";

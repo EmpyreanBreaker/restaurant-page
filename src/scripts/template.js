@@ -19,10 +19,10 @@ import "../css/fonts.css";
     //homePageContent();
 
     // Menu Page Content
-    // menuPageContent();
+     menuPageContent();
 
     // About Content Settings
-    aboutPageContent();
+    // aboutPageContent();
 
     // Footer Settings
     footerContent()

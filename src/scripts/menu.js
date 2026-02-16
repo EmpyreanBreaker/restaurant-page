@@ -9,6 +9,8 @@ const teaMenu = document.createElement("div");
 
 // Create menu section title card
 const menuTitleCard = document.createElement("div");
+menuTitleCard.classList.add("site-about__menu-card");
+
 
 // Create tea list
 const teaList = [
@@ -142,8 +144,7 @@ const positionMenuBanner = () => {
 }
 
 const styleMenuBanner = () => {
-    menuBanner.style.backgroundColor = "#000000";
-    menuBanner.style.opacity = "0.3";
+    menuBanner.style.backgroundColor = "rgba(0, 0, 0, 0.55)";
 };
 
 const createMenuTitleCard = () => {
@@ -161,10 +162,14 @@ const createMenuTitleCard = () => {
 };
 
 const positionMenuTitleCard = () => {
+    menuTitleCard.style.display = "flex";
+    menuTitleCard.style.flexDirection = "column";
+    menuTitleCard.style.alignItems = "center";
 
 }
 
 const styleMenuTitleCard = () => {
+    menuTitleCard.style.borderBottom = "1px solid #A7B8A3"
 }
 
 const createTeaMenu = () => {
@@ -200,24 +205,33 @@ const createTeaMenu = () => {
 const positionTeaMenu = () => {
     teaMenu.style.display = "grid";
     teaMenu.style.gap = "1rem";
+    teaMenu.style.padding = "1rem";
 }
 
 const styleTeaMenu = () => {
-    teaMenu.style.border = "3px solid yellow";
+    teaMenu.style.borderWidth = "0px 2px 0px 2px";
+    teaMenu.style.borderStyle = "solid";
+    teaMenu.style.borderColor = "#F5F1E8";
+    teaMenu.style.borderRadius = "1rem";
 }
 
 const positionTeaCard = () => {
     const teaCard = document.querySelectorAll(".site-menu__tea-card");
     teaCard.forEach(card => {
-        card.style.display = "grid";
-        card.style.gap = "0.6rem";
+        card.style.display = "flex";
+        card.style.flexDirection = "column";
+        card.style.justifyContent = "center";
+        card.style.gap = "0.4rem";
+        card.style.padding = "1rem";
+        card.style.width = "60ch";
     })
 }
 
 const styleTeaCard = () => {
     const teaCard = document.querySelectorAll(".site-menu__tea-card");
     teaCard.forEach(card => {
-        card.style.border = "5px solid blue";
+        card.style.border = "1px solid #A7B8A3";
+        card.style.borderRadius = "1rem";
     })
 }
 

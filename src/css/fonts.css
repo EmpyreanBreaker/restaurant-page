@@ -59,6 +59,35 @@
     font-size: 3rem;
 }
 
+/** MENU FONT STYLINGS **/
+.site-about__menu-card>h3 {
+    font-family: 'Playfair Display', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 4rem;
+}
+
+.site-about__menu-card>p {
+    font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+.site-menu__tea-card>h3 {
+    font-family: 'Playfair Display', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+.site-menu__tea-card>p {
+    font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+}
+
 /** ABOUT FONT STYLINGS **/
 .site-about__title-card>h3 {
     font-family: 'Playfair Display', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
