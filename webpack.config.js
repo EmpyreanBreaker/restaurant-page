@@ -20,6 +20,9 @@ export default {
 			{
 				test: /\.css$/i,
 				use: ["style-loader", "css-loader"],
+				generator: {
+					filename: "css/[name][ext]"
+				}
 			},
 			{
 				test: /\.html$/i,
@@ -28,6 +31,16 @@ export default {
 			{
 				test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
 				type: "asset/resource",
+				generator: {
+					filename: "images/[name][ext]"
+				}
+			},
+			{
+				test: /\.(woff|woff2|eot|ttf|otf)$/i,
+				type: "asset/resource",
+				generator: {
+					filename: "fonts/[name][ext]"
+				}
 			},
 		]
 	}

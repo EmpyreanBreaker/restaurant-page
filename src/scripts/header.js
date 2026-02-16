@@ -62,8 +62,6 @@ const styleButtons = () => {
             button.style.borderBottom = "1px solid transparent"
         })
     })
-
-
 }
 
 const navigation = (showHomeContent, showMenuContent, showAboutContent) => {
