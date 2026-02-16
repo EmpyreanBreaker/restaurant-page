@@ -95,27 +95,23 @@ const positionLeftBanner = () => {
     leftBanner.style.flexDirection = "column";
     leftBanner.style.justifyContent = "center";
     leftBanner.style.alignItems = "flex-end";
-
 };
 
 const styleLeftBanner = () => {
-    leftBanner.style.borderRight = "1px solid white";
-    leftBanner.style.background = "#000000";
-    leftBanner.style.opacity = "0.3";
-    leftBanner.style.padding = "10px";
+    leftBanner.style.backgroundColor = "rgba(0, 0, 0, 0.55)";
+    leftBanner.style.paddingRight = "1rem";
 };
 
 const positionRightBanner = () => {
     rightBanner.style.display = "flex";
     rightBanner.style.flexDirection = "column";
     rightBanner.style.justifyContent = "center";
-
+    rightBanner.style.alignItems = "flex-start";
 };
 
 const styleRightBanner = () => {
-    rightBanner.style.backgroundColor = "#000000";
-    rightBanner.style.opacity = "0.3";
-    rightBanner.style.padding = "10px";
+    rightBanner.style.backgroundColor = "rgba(0, 0, 0, 0.55)";
+    rightBanner.style.paddingLeft = "1rem";
 };
 
 export { homePageContent };

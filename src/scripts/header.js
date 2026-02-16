@@ -49,7 +49,6 @@ const styleButtons = () => {
         button.style.cursor = "pointer";
         button.style.color = "#F5F1E8";
         button.style.borderBottom = "1px solid transparent"
-        button.style.fontSize = "2rem";
 
         // Hover style
         button.addEventListener("mouseenter", () => {

@@ -34,9 +34,27 @@
     font-display: swap;
 }
 
-/** HEADER FONTS **/
+/** HEADER FONT STYLINGS **/
 .site-nav__button {
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: normal;
     font-style: normal;
+    font-size: 2rem;
+}
+
+/** HOME FONT STYLINGS **/
+.site-home__restaurant-title {
+    font-family: 'Playfair Display', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 6rem;
+    border-bottom: 2px solid #A7B8A3;
+}
+
+.site-home__invitation,
+.site-home__welcome {
+    font-family: 'Playfair Display', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 3rem;
 }
