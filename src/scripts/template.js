@@ -5,6 +5,7 @@ import { menuPageContent } from "./menu.js";
 import { aboutPageContent } from "./about.js";
 import { footerContent } from "./footer.js";
 import "../css/reset.css";
+import "../css/fonts.css";
 
 // Run on page load
 (() => {
@@ -18,7 +19,7 @@ import "../css/reset.css";
     homePageContent();
 
     // Menu Page Content
-   // menuPageContent();
+    // menuPageContent();
 
     // About Content Settings
     //aboutPageContent();
@@ -27,4 +28,4 @@ import "../css/reset.css";
     footerContent()
 })();
 
- navigation(homePageContent, menuPageContent, aboutPageContent);
+navigation(homePageContent, menuPageContent, aboutPageContent);
